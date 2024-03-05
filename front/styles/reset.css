@@ -148,7 +148,7 @@ select {
 button,
 input,
 textarea {
-    -webkit-appearance: none;
+    
     /* Reset inner border and padding */
     border: none;
     padding: 0;

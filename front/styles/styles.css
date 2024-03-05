@@ -1,0 +1,59 @@
+body {
+    background-color: aliceblue;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+header {
+    background-color: black;
+    padding: 10px;
+}
+.divMenu {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+a {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    background-color: aliceblue;
+
+}
+
+.divSearch {
+    padding: 5px;
+    width: 100%;
+    display: inline-block;
+}
+
+.divSearch form input {
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: aliceblue;
+
+}
+
+.divSearch form button {
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.divCards {
+    background-color: black;
+    margin: 20px;
+    border-radius: 10px;
+}
