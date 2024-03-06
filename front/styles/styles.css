@@ -1,5 +1,5 @@
 body {
-    background-color: aliceblue;
+    background-color: rgb(215, 222, 227);
 }
 h1{
     text-align: center;
@@ -29,7 +29,26 @@ a {
     background-color: aliceblue;
 
 }
+.cardMovie img {
+    border-radius: 10px;
+    padding: 5px;
+}
 
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.cardMovie {
+    margin: 1em;
+    width: 350px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(155, 167, 167);
+    
+}
 .divSearch {
     padding: 5px;
     width: 100%;
@@ -56,4 +75,18 @@ a {
     background-color: black;
     margin: 20px;
     border-radius: 10px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center; /* Centra verticalmente los elementos */
+}
+section {
+    margin: 20px;
+    border: 5px solid black;
+    border-radius: 10px;
+    background-color: rgb(140, 162, 175);
+    color: rgb(255, 255, 255);
 }
