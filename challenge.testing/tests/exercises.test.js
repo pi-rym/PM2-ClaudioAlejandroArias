@@ -3,12 +3,12 @@ const CarritoCompra = require ("../index.js")
 describe("Clase CarritoCompra", () => {
     let carrito;
     beforeEach(() => {
-        const carrito = new CarritoCompra();
+        carrito = new CarritoCompra();
     })
     const producto1 = { name: "Producto1", price: 10};
     const producto2 = { name: "Producto2", price: 20};
 
-    it ("CarritoCompra deber ser una clase", () => {
+    it("CarritoCompra deber ser una clase", () => {
         expect(typeof CarritoCompra).toBe("function");
         expect(carrito instanceof CarritoCompra).toBe(true);
     });
@@ -16,7 +16,7 @@ describe("Clase CarritoCompra", () => {
     it("CarrritoCompra inicia la propiedad products como un Array vacio", ()=>{
         expect(Array.isArray()).toBe(true);
         expect(carrito.products).toHaveLength(0);
-    })
+    });
     
     it("agregarProducto agrega productos al carrito", ()=> {
         carrito.agregarProducto(producto1);
