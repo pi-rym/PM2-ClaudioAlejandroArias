@@ -16,7 +16,7 @@ const axios = require("axios");
 //Async Await
 const getFilms = async() => {
     try {
-        const result = await axios.get("https://www.localhost:3000/movies")
+        const result = await axios.get("http://localhost:3000/movies")
         result.data.map(renderFilms);  
     } catch (error) {
         console.log(error.message);
