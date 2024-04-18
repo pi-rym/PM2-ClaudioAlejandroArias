@@ -5,4 +5,4 @@ const moviesRouter = Router();
 
 moviesRouter.get("/", moviesController)
 
-module.exports  = {moviesRouter};
+module.exports  = {moviesRouter}
