@@ -1,7 +1,7 @@
 const { getMoviesService } = require ("../services/moviesServiece")
 
-const moviesController = (req, res)=>{
-    const movies = getMoviesService()
+const moviesController = async (req, res)=>{
+    const movies = await getMoviesService()
     res.status(200).send(movies);
 }
 
