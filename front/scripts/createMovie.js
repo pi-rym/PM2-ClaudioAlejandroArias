@@ -75,8 +75,7 @@ const handlerSubmit = (event) => {
     // console.log(movie);//
     const sendDataToBackend = async (movie) => {
         try {
-            const response = await axios.post('/movies/createMovie', movie);
-            console.log(response.movie); // Esto imprimirá la respuesta del servidor en la consola
+            const response = await axios.post('http://localhost:3000/movies', movie);
         } catch (error) {
             console.error('Error al enviar datos al backend:', error);
         }

@@ -12,13 +12,21 @@ module.exports = {
         }
     },
 
-    createMovie : async () => {
+    // createMovie : async () => {
+    //     try {
+    //         const movie = await Movie.create();
+    //         return movie;
+    //     } catch (error) {
+    //         console.log("No se ha recibido datos en el moviesServiece para crear la movie");
+    //         throw error.message;
+    //     }
+    // }//
+
+    postMovieService: async (movie)=> {
         try {
-            const movie = await Movie.create();
-            return movie;
+            await Movie.create(movie)
         } catch (error) {
-            console.log("No se ha recibido datos en el moviesServiece para crear la movie");
-            throw error.message;
+            throw error.message
         }
-    }//
+    }
 };
