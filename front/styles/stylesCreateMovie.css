@@ -66,17 +66,11 @@ main{
     margin: 20px;
     grid-area: main;
 }
-section {
-    display: grid;
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(300px, 1fr)
-    );
-    gap: 20px;
-    grid-area: section;
-}
+
 
 form {
+    padding: 10px;
+    border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.794);
 }
 
@@ -160,4 +154,18 @@ footer h3 {
   .sci li a:hover {
     background: #f49c03;
     color: #fff;
+  }
+
+  .formCreateMovie {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    padding: 10px;
+  }
+
+  .formCreateMovie h2{
+    color: #fff;
+    align-self: center;
+    padding: 10px;
+    
   }

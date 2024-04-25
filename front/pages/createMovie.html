@@ -33,36 +33,60 @@
           <li><a class="ali" href="../index.html">Inicio</a></li>
           <li><a class="ali"href="../index.html">Pelicula</a></li>
           <li><a class="ali"href="#createMovie">CreaPelis</a></li>
-          <li><a class="ali"href="../pages/about.html">About</a></li>
+          <li><a class="ali"href="./aboutPelis.html">AboutPelis</a></li>
           <li><a class="ali"href="https://github.com/ClaudioAlejandroArias"
           target="_blank" rel="noreferrer">MiGitHud</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section id="formCreateMovie">
-        <h2>Formulario</h2><br>
+      <section  class="formCreateMovie" id="formCreateMovie">
+        <h2>Formulario</h2>
         <form id="form" class="row mb-3" action="/procesar_formulario" method="post">
-            <label for="title" class="col-sm-2 col-form-label">Title: </label>
-            <input type="text" class="form-control col-sm-10" id="title" name="title" required placeholder="title"><br><br>
+          <div class="row mb-3">
+              <label for="title" class="col-sm-2 col-form-label">Title: </label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control col-sm-10" id="title" name="title" required placeholder="title">
+              </div>
+          </div>
             
-            <label for="year">Year: </label>
-            <input type="number" id="year" name="year" min="1800" max="2024" placeholder="year"><br><br>
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label" for="year">Year: </label>
+              <div class="col-sm-10">
+                <input class="form-control" type="number" id="year" name="year" min="1800" max="2024" placeholder="year">
+              </div>
+            </div>
             
-            <label for="director">Director: </label>
-            <input type="text" id="director" name="director" required placeholder="director"><br><br>
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label" for="director">Director: </label>
+              <div class="col-sm-10">
+                <input class="form-control" type="text" id="director" name="director" required placeholder="director">
+              </div>
+            </div>
             
-            <label for="duration">Duration: </label>
-            <input type="text" id="duration" name="duration" required placeholder="duration"><br><br>
-            
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label" for="duration">Duration: </label>
+              <div class="col-sm-10"> 
+                <input  class="form-control" type="text" id="duration" name="duration" required placeholder="duration">
+              </div> 
+            </div>
+
             <label for="genre">Genre: </label>
             <div id="options"></div>
-
-            <label for="rate">Rate: </label>
-            <input type="number" id="rate" name="rate" required placeholder="rate" step="0.1" min="1" max="10"><br><br>
             
-            <label for="poster">Poster: </label>
-            <input type="text" id="poster" name="poster" required placeholder="poster"><br><br>
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label" for="rate">Rate: </label>
+              <div class="col-sm-10">
+                <input class="form-control" type="number" id="rate" name="rate" required placeholder="rate" step="0.1" min="1" max="10">
+              </div>
+            </div>
+            
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label" for="poster">Poster: </label>
+              <div class="col-sm-10">
+                <input class="form-control" type="text" id="poster" name="poster" required placeholder="poster">
+              </div>
+            </div>
 
             <div>
               <button type="submit" value="Enviar" id="btnSubmit" class="btn btn-primary">Enviar</button>

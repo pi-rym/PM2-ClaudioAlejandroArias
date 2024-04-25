@@ -1,4 +1,4 @@
-//const axios = require("axios")
+const axios = require("axios")
 const genres = [
     "Actions",
     "Comedy",
@@ -28,6 +28,7 @@ const renderGenres = () => {
         const label = document.createElement("label")
 
         input.type = "checkbox"
+        input.style.margin="5px"
         input.id = genre
         input.name = "genre[]"
         input.value = genre
@@ -59,7 +60,7 @@ const handlerSubmit = (event) => {
     event.preventDefault()
     const genres = validateCheckbox()
 
-    if (![title.value, year.value, director.value, duration.value, rate.value, poster.value, genres].every(Boolean)) return alert("falta llenar campos");
+    if (![title.value, year.value, director.value, duration.value, rate.value, poster.value, genres].every(Boolean)) return alert("Falta llenar campos en el Formulario");
     const movie = {
         title: title.value,
         year: year.value,
@@ -69,9 +70,21 @@ const handlerSubmit = (event) => {
         poster: poster.value,
         genre: genres
     }
-    //axios.post("urlserver", movie)
+    // axios.post("/movies/createMovie", movie).then((response)=> console.log("envio form correcto a back" + response))
+    // .catch((error)=> console.log("No se puede enviar form a back", error))//
+    // console.log(movie);//
+    const sendDataToBackend = async (movie) => {
+        try {
+            const response = await axios.post('/movies/createMovie', movie);
+            console.log(response.movie); // Esto imprimirá la respuesta del servidor en la consola
+        } catch (error) {
+            console.error('Error al enviar datos al backend:', error);
+        }
+    };
+    sendDataToBackend(movie)
     alert("pelicula enviada")
 }
+
 
 
 const cleanInputs = () => {

@@ -10,5 +10,15 @@ module.exports = {
         } catch (error) {
             throw error.message;
         }
-    }
+    },
+
+    createMovie : async () => {
+        try {
+            const movie = await Movie.create();
+            return movie;
+        } catch (error) {
+            console.log("No se ha recibido datos en el moviesServiece para crear la movie");
+            throw error.message;
+        }
+    }//
 };
